@@ -1,0 +1,36 @@
+Print the following fibonacci series in the given pattern
+0
+1 1 
+2 3 5 
+8 13 21 34
+
+
+
+#c program to print the following pattern
+
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int i,j,n,a=0,b=1,c;
+    printf("Enter the value of N (limit): ");
+    scanf("%d",&n);
+    printf("%d\n",a);
+    for(i=1;i<=n-1;i++){
+        for(j=0;j<=i;j++){
+            c=a+b;
+            a=b;
+            b=c;
+            printf("%d ",a);
+        }
+        printf("\n");
+    }
+}
+
+
+Output:
+Enter the value of N (limit): 4
+0
+1 1 
+2 3 5 
+8 13 21 34 
